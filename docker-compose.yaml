@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    build: .
+    volumes:docker exec -i -t exampleApp3000 ls -alF /app
+      - ./logs:/logs
+    command: python parser.py
+
+  chart:
+    build: .
+    volumes:
+      - ./logs:/logs
+    command: python chart.py
